@@ -1,2 +1,2 @@
 # algos
-Playing around with Generics and algos 
+Simple repo for playing around with Generics 
