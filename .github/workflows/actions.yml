@@ -23,4 +23,4 @@ jobs:
     - name: Test
       run: go test ./... -v
     - name: Benchmark
-      run: cd internal; go test -bench=. -v -count 5
+      run: cd internal; go test -bench=. -v 

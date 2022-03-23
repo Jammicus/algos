@@ -8,7 +8,7 @@ import (
 func main() {
 	fmt.Println("Hello world")
 
-	list := algos.GenerateSlice(100000)
+	list := algos.GenerateSlice(10000)
 
 	fmt.Println(algos.BinarySearch([]int{1, 2, 3, 4, 5, 6, 7}, 4))
 	fmt.Println(algos.SelectionSort(list))
