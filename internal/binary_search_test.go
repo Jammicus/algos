@@ -6,12 +6,12 @@ import (
 )
 
 func TestBinarySearch(t *testing.T) {
-
-	var inputs = []struct {
-		Input   []int
-		Integer int
-		Answer  int
-	}{
+	type testInputs[T algos.Number] struct {
+		Input   []T
+		Integer T
+		Answer  T
+	}
+	var inputs = []testInputs[int]{
 		{[]int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, 9, 9},
 		{[]int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, 5, 5},
 		{[]int{0, 1, 3, 5, 7, 9, 11}, 11, 6},
@@ -19,11 +19,7 @@ func TestBinarySearch(t *testing.T) {
 		{[]int{0, 1, 1, 5, 7, 9, 11, 15, 19, 22}, 19, 8},
 	}
 
-	var inputsB = []struct {
-		Input   []float64
-		Integer float64
-		Answer  float64
-	}{
+	var inputsB = []testInputs[float64]{
 		{[]float64{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, 9, 9},
 		{[]float64{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, 5, 5},
 		{[]float64{0, 1, 3, 5, 7, 9, 11}, 11, 6},

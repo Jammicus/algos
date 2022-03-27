@@ -6,20 +6,19 @@ import (
 )
 
 func TestMergesort(t *testing.T) {
+	type testInputs[T algos.Number] struct {
+		Input  []T
+		Answer []T
+	}
+	var inputs = []testInputs[int]{
 
-	var inputs = []struct {
-		Input  []int
-		Answer []int
-	}{
 		{[]int{5, 1, 8, 0, 4, 5, 6, 7, 11, 9}, []int{0, 1, 4, 5, 5, 6, 7, 8, 9, 11}},
 		{[]int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, []int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}},
 		{[]int{-15, 15, -45, 0, 2, 3, 22}, []int{-45, -15, 0, 2, 3, 15, 22}},
 	}
 
-	var inputsB = []struct {
-		Input  []float64
-		Answer []float64
-	}{
+	var inputsB = []testInputs[float64]{
+
 		{[]float64{5, 1, 8, 0, 4, 5, 6, 7, 11, 9}, []float64{0, 1, 4, 5, 5, 6, 7, 8, 9, 11}},
 		{[]float64{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, []float64{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}},
 		{[]float64{-15, 15, -45, 0, 2, 3, 22}, []float64{-45, -15, 0, 2, 3, 15, 22}},
