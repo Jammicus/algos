@@ -2,11 +2,6 @@ package internal
 
 import "testing"
 
-type TestInputs[K Number] struct {
-	Input  []K
-	Answer []K
-}
-
 func AssertEqual[K Number](t *testing.T, got, want K) {
 	t.Helper()
 	if got != want {
