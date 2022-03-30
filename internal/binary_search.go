@@ -1,11 +1,9 @@
 package internal
 
 func BinarySearch[K Number](m []K, item K) K {
-	var low K
-	var high K
+	var low K = 0
+	var high K = len(m) - 1
 	var answer K
-	low = 0
-	high = len(m) - 1
 
 	for low < high {
 		var middle K
@@ -19,10 +17,12 @@ func BinarySearch[K Number](m []K, item K) K {
 
 		if guess > item {
 			high = middle - 1
+			continue
 		}
 
 		if guess < item {
 			low = middle + 1
+			continue
 		}
 
 	}
